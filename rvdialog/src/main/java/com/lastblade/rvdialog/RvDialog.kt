@@ -35,6 +35,7 @@ class RvDialog(context: Context) : Dialog(context, R.style.customRVDialog) {
         v.tv.text = text
     }
 
+    @JvmOverloads
     fun listValues(
         data: ArrayList<String>,
         handler: (text: String, position: Int) -> Unit
@@ -43,6 +44,7 @@ class RvDialog(context: Context) : Dialog(context, R.style.customRVDialog) {
         v.rv.adapter = RvSpinnerAdapter(data, handler)
     }
 
+    @JvmOverloads
     fun negativeButton(text: String = "Cancel"): RvDialog = apply {
         cancel.text = text
         cancel.setOnClickListener { dismiss() }
@@ -78,6 +80,7 @@ class RvDialog(context: Context) : Dialog(context, R.style.customRVDialog) {
 
                 tv.setOnClickListener {
                     handler(value, adapterPosition)
+                    dismiss()
                 }
             }
         }

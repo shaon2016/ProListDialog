@@ -26,8 +26,6 @@ class MainActivity : AppCompatActivity() {
                 title("Title")
                 listValues(data) { text, position ->
                     this@MainActivity.tv.text = "Selected item: $text"
-
-                    dismiss()
                 }
 
                 negativeButton()
