@@ -37,7 +37,7 @@ class RvDialog(context: Context) : Dialog(context, R.style.customRVDialog) {
 
     @JvmOverloads
     fun listValues(
-        data: ArrayList<String>,
+        data: List<String>,
         handler: (text: String, position: Int) -> Unit
     ): RvDialog = apply {
         v.rv.layoutManager = LinearLayoutManager(context)
@@ -56,7 +56,7 @@ class RvDialog(context: Context) : Dialog(context, R.style.customRVDialog) {
     }
 
     private inner class RvSpinnerAdapter(
-        private val items: ArrayList<String>,
+        private val items: List<String>,
         private val handler: (text: String, position: Int) -> Unit
     ) :
         RecyclerView.Adapter<RvSpinnerAdapter.MyVH>() {
