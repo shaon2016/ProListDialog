@@ -22,7 +22,7 @@ Add it in your root build.gradle at the end of repositories:
 # Screenshot
 
 
-![](screenshot/image1.jpeg) 
+![](screenshot/image1.png) 
 
 
 # How to use it
