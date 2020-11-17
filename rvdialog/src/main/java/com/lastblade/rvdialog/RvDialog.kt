@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2020.
+ * Ashiqul Islam
+ */
+
 package com.lastblade.rvdialog
 
 import android.app.Dialog
@@ -66,7 +71,7 @@ class RvDialog(context: Context) : Dialog(context, R.style.customRVDialog) {
 
         override fun getItemCount() = items.size
 
-        private inner class MyVH(private val v: View) : RecyclerView.ViewHolder(v) {
+        private inner class MyVH(v: View) : RecyclerView.ViewHolder(v) {
             private val tv = v.text1
             fun bind(value: String) {
                 tv.text = value

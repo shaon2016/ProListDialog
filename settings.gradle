@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2020.
+ * Ashiqul Islam
+ */
+
 include ':rvdialog'
 include ':app'
 rootProject.name = "SpinnerDialogTest"

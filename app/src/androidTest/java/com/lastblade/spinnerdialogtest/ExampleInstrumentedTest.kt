@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2020. 
+ * Ashiqul Islam
+ */
+
 package com.lastblade.spinnerdialogtest
 
 import androidx.test.platform.app.InstrumentationRegistry
