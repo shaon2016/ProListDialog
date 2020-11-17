@@ -67,3 +67,27 @@ Change negative button color
 ```
             negativeButton(textColor = resources.getColor(R.color.colorAccent))
 ```
+
+# How to work with model class
+
+In kotlin,
+
+```
+data class Item (val name: String)
+
+val list = ArrayList<Item>()
+list.add(Item("Mango"))
+
+val data = list.map {it.name}
+
+           RvDialog(this).show {
+                title("Title")
+                listValues(data) { text, position ->
+                    this@MainActivity.tv.text = "Selected item: $text"
+
+                    dismiss()
+                }
+
+                negativeButton()
+            }
+```
