@@ -12,6 +12,9 @@ import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.ColorInt
+import androidx.annotation.ColorRes
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.custom_spinner_dialog.*
@@ -31,8 +34,13 @@ class RvDialog(context: Context) : Dialog(context, R.style.customRVDialog) {
         setCanceledOnTouchOutside(false)
     }
 
-    fun title(text: String): RvDialog = apply {
+    @JvmOverloads
+    fun title(
+        text: String,
+        @ColorInt titleColor: Int = ContextCompat.getColor(context, android.R.color.black)
+    ): RvDialog = apply {
         v.tv.text = text
+        v.tv.setTextColor(titleColor)
     }
 
     @JvmOverloads
@@ -45,8 +53,9 @@ class RvDialog(context: Context) : Dialog(context, R.style.customRVDialog) {
     }
 
     @JvmOverloads
-    fun negativeButton(text: String = "Cancel"): RvDialog = apply {
+    fun negativeButton(text: String = "Cancel", @ColorInt textColor: Int = 0): RvDialog = apply {
         cancel.text = text
+        cancel.setTextColor(textColor)
         cancel.setOnClickListener { dismiss() }
     }
 
