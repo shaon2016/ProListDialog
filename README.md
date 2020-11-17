@@ -56,3 +56,14 @@ From Java
                     })
                     .show();
 ```
+
+Change dialog title color
+
+``` 
+            title("Title", ContextCompat.getColor(context, R.color.colorPrimaryDark))
+```
+
+Change negative button color
+```
+            negativeButton(textColor = resources.getColor(R.color.colorAccent))
+```
