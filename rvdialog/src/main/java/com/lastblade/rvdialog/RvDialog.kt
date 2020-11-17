@@ -53,7 +53,13 @@ class RvDialog(context: Context) : Dialog(context, R.style.customRVDialog) {
     }
 
     @JvmOverloads
-    fun negativeButton(text: String = "Cancel", @ColorInt textColor: Int = 0): RvDialog = apply {
+    fun negativeButton(
+        text: String = "Cancel",
+        @ColorInt textColor: Int = ContextCompat.getColor(
+            context,
+            android.R.color.holo_red_light
+        )
+    ): RvDialog = apply {
         cancel.text = text
         cancel.setTextColor(textColor)
         cancel.setOnClickListener { dismiss() }

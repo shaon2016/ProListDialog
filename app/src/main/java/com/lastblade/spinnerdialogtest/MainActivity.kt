@@ -24,12 +24,12 @@ class MainActivity : AppCompatActivity() {
 
         btnShowDialog.setOnClickListener {
             RvDialog(this).show {
-                title("Title", ContextCompat.getColor(context, R.color.colorPrimaryDark))
+                title("Title")
                 listValues(data) { text, position ->
                     this@MainActivity.tv.text = "Selected item: $text"
                 }
 
-                negativeButton(textColor = resources.getColor(R.color.colorAccent))
+                negativeButton()
             }
         }
 
