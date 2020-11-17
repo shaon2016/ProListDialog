@@ -36,8 +36,6 @@ In your activity or fragment
                 title("Title")
                 listValues(data) { text, position ->
                     this@MainActivity.tv.text = "Selected item: $text"
-
-                    dismiss()
                 }
 
                 negativeButton()
@@ -84,8 +82,6 @@ val data = list.map {it.name}
                 title("Title")
                 listValues(data) { text, position ->
                     this@MainActivity.tv.text = "Selected item: $text"
-
-                    dismiss()
                 }
 
                 negativeButton()
