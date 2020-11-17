@@ -3,6 +3,7 @@ package com.lastblade.spinnerdialogtest
 import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
 import com.lastblade.rvdialog.RvDialog
 import kotlinx.android.synthetic.main.activity_main.*
@@ -19,7 +20,8 @@ class MainActivity : AppCompatActivity() {
             RvDialog(this).show {
                 title("Title")
                 listValues(data) { text, position ->
-                    tv.text = text
+                    this@MainActivity.tv.text = "Selected item: $text"
+
                     dismiss()
                 }
 
