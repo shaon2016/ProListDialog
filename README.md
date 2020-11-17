@@ -27,6 +27,8 @@ Add it in your root build.gradle at the end of repositories:
 
 # How to use it
 
+From Kotlin
+
 In your activity or fragment
 
 ```
@@ -40,4 +42,17 @@ In your activity or fragment
 
                 negativeButton()
             }
+```
+
+From Java
+
+```
+            new RvDialog(this)
+                    .title("Title")
+                    .negativeButton()
+                    .listValues(items, (item, index) -> {
+                        tv.setText(item);
+                        return null;
+                    })
+                    .show();
 ```
