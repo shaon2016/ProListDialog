@@ -1,0 +1,3 @@
+include ':rvdialog'
+include ':app'
+rootProject.name = "SpinnerDialogTest"
