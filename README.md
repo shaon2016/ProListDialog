@@ -1,5 +1,5 @@
 # ProListDialog
-This dialog shows a list of item. It uses Recycler View to show the items
+A simple library to show a list of items in a dialog. It uses the recyclerview to show the items in a dialog.
 
 Add it in your root build.gradle at the end of repositories:
 
@@ -11,7 +11,7 @@ Add it in your root build.gradle at the end of repositories:
 		}
 	}
 ```
-Add the dependency
+# Add the dependency
 
 ```
 	dependencies {
@@ -19,7 +19,13 @@ Add the dependency
 	}
 ```
 
-How to use it
+# Screenshot
+
+
+![](screenshot/image1.jpeg) 
+
+
+# How to use it
 
 In your activity or fragment
 
